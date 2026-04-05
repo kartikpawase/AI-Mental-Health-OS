@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  neuroguard-app:
+    build:
+      context: ../
+      dockerfile: deployment/Dockerfile
+    container_name: neuroguard_production
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    volumes:
+      # Keep the database persistent across container restarts
+      - ../backend/neuroguard.db:/app/backend/neuroguard.db
+    environment:
+      - ENVIRONMENT=production

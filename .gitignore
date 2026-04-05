@@ -1,0 +1,59 @@
+# Virtual Environment — MUST be first to prevent git from indexing GBs of packages
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Sensitive Files — NEVER push API keys
+.streamlit/secrets.toml
+
+# Trained model weights (large files)
+ai_models/neuroguard_model.pth
+ai_models/preprocessor.pkl
+
+# Database
+backend/neuroguard.db
+*.db
+*.sqlite3
+
+# Data files (generated)
+data/dummy_data.csv
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Distribution
+dist/
+build/
+*.egg-info/
